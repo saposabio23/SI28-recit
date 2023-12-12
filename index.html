@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Projet" startnode="9" creator="Twine" creator-version="2.7.1" format="SugarCube" format-version="2.36.1" ifid="2ECA65E0-3703-4BCF-AAAA-9B5BD7A461C6" options="" tags="" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap');
+	<tw-storydata name="DANS MA PEAU" startnode="9" creator="Twine" creator-version="2.7.1" format="SugarCube" format-version="2.36.1" ifid="2ECA65E0-3703-4BCF-AAAA-9B5BD7A461C6" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap');
 
 body {
 	background-color: black;
@@ -112,6 +112,14 @@ a:active {
       background-color: #ffffff8c !important;
 }
 
+
+.passage {
+	transition: none;
+}
+
+
+/*GLOBAL STYLE*/
+
 #story {
     padding: 20px;
     margin: 0;
@@ -120,12 +128,12 @@ a:active {
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-  
+  	font-weight: 600;
     font-size: 20px;
   	line-height: 28px;,
-  line-height: 1.6 !important;
+  	line-height: 1.6 !important;
     font-family: 'Fraunces', serif;
-  text-shadow: 0 0 10px black;
+ 	 text-shadow: 0 0 10px black;
 
   
 }
@@ -138,8 +146,11 @@ img {
     left: 0;
     z-index: -1;
     object-fit: cover;
-  opacity: 0.7;
+ 	opacity: 0.7;
 }
+
+
+/*HEADER*/
 
 header {
 width: 100vw;
@@ -177,7 +188,12 @@ font-size: 14px;
 text-shadow: 0px 0px 10px #000;
 backdrop-filter: blur(10px);
 font-family: sans-serif;
+  font-weight: 400;
+
 }
+
+
+/*JAUGE*/
 
 .niveau {
   position: fixed;
@@ -203,6 +219,9 @@ font-family: sans-serif;
   background: linear-gradient(180deg, rgba(255,255,255,0) -50%, rgb(0, 0, 0) 80%)
 }
 
+
+/*REPONSES*/
+
 .reponses{
 	width: calc(100% - 40px);
     display: flex;
@@ -212,24 +231,23 @@ font-family: sans-serif;
     bottom: 0;
     left: 0;
     margin: 20px;
-  
     font-family: sans-serif;
   	font-size: 14px;
-  
 }
 
 .reponses a {
     background-color: #ffffff4a;
     padding: 10px;
-    width: inherit;
+	width: 100%;
     text-align: center;
     border-radius: 10px;
     color: white;
-backdrop-filter: blur(10px);
-  display: flex;
-align-items: center;
-  justify-content: center;
-
+	backdrop-filter: blur(10px);
+  	display: flex;
+	align-items: center;
+  	justify-content: center;
+  	border: 1px solid white;
+  box-sizing: border-box;
 }
 
 .deux > a:nth-of-type(1){
@@ -241,8 +259,56 @@ align-items: center;
   	border-radius: 0 10px 10px 0!important;
 }
 
-.passage {
-	transition: none;
+
+/*INTRO STYLE*/
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  height: 180px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 31px;
+  font-family: sans-serif;
+}
+
+#titre {
+  font-size: 34px;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  color: gold;
+  font-weight: 900;
+font-family: 'Fraunces', serif;
+}
+
+.reponses.deux.index {
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reponses.deux.index a {
+  border-radius: 10px !important;
+border: 1px solid white;
+border-width: 1px;
+}
+
+
+.reponses.deux.index a:nth-child(2) {
+  background-color: red;
+}
+
+.reponses.deux.index a:nth-child(4) {
+  background-color: blue;
+}
+
+/*A PROPOS STYLE*/
+.apropos {
+  font-family: sans-serif;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.debug = false;
 UIBar.destroy();
 UIBar.stow();</script><tw-passagedata pid="1" name="INTRO1" tags="" position="500,200" size="100,100">Bonjour, si tu es ici ce n’est pas un hasard…
@@ -252,7 +318,7 @@ UIBar.stow();</script><tw-passagedata pid="1" name="INTRO1" tags="" position="50
 &lt;/div&gt;
 
 &lt;img src=&quot;fonds/INTRO.PNG&quot;&gt;
-</tw-passagedata><tw-passagedata pid="2" name="INTRO2" tags="" position="700,200" size="100,100">Dans les prochaines minutes tu vas vivre une journée dans ma peau. Tu seras plongée dans ma tête, et confrontée à mes sentiments... peut-être même les plus intimes..
+</tw-passagedata><tw-passagedata pid="2" name="INTRO2" tags="" position="700,200" size="100,100">Dans les prochaines minutes tu vas vivre une journée dans ma peau. Tu seras plongé·e dans ma tête, et confronté·e à mes sentiments...
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Continuer|INTRO3]]
@@ -313,9 +379,15 @@ UIBar.stow();</script><tw-passagedata pid="1" name="INTRO1" tags="" position="50
 &lt;&lt;cacheaudio &quot;tictac&quot; &quot;audio/tictac.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;fete&quot; &quot;audio/fete.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;pas&quot; &quot;audio/pas.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;cafe&quot; &quot;audio/cafe.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="INDEX" tags="" position="500,50" size="100,100">&lt;span id=&quot;titre&quot;&gt;Dans ma peau?&lt;/span&gt;
+&lt;&lt;cacheaudio &quot;cafe&quot; &quot;audio/cafe.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;attente&quot; &quot;audio/attente.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;sncf&quot; &quot;audio/sncf.mp3&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="INDEX" tags="" position="500,50" size="100,100">&lt;div class=&quot;intro&quot;&gt;
+&lt;span id=&quot;titre&quot;&gt;Dans ma peau&lt;/span&gt;
 
-Une journée dans le quotidien d&#39;une autre personne
+Expérience immersive dans mon quotidien.
+
+&lt;/div&gt;
 
 &lt;div class=&quot;reponses deux index&quot;&gt;
 [[Commencer|INTRO1]]
@@ -638,9 +710,11 @@ Elle n&#39;a jamais accepté de me les défriser.
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-&lt;&lt;audio &quot;sncf&quot; start&gt;&gt;
 &lt;&lt;audio &quot;tictac&quot; stop&gt;&gt;
-</tw-passagedata><tw-passagedata pid="41" name="APROPOS" tags="" position="325,200" size="100,100">Ce récit intéractif est née dans le cours appellé &quot;xx&quot; impartit par Serge Bouchardon à l&#39;UTC de Compiègne. Nous, Alaine, Mulonde et Pablo, avons proposé ce...
+&lt;&lt;audio &quot;sncf&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="41" name="APROPOS" tags="" position="325,200" size="100,100">&lt;div class=&quot;apropos&quot;&gt;Dans ma peau est un récit narratif interactif, dans lequel les utilisateurs se mettent, comme son titre l’indique, dans la peau d’une personne subissant des discriminations raciales. Ce site offre une expérience immersive et éducative, permettant aux utilisateurs de mieux comprendre les défis et les émotions auxquelles sont confrontées les personnes victimes de ce type de discriminations.
+
+Ce projet a été réalisé dans le cadre du cours de SI28 impartit par Serge Bouchardon à l&#39;UTC de Compiègne au semestre d&#39;automne 2023. Imaginé et conçu par Alaina Saint-Denis, Mulonde Reis et Pablo Moreno, nous avons travaillé à six mains pour mettre en forme de récit, images et développement. &lt;/div&gt;
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Retour|INDEX]]
@@ -671,29 +745,8 @@ Elle n&#39;a jamais accepté de me les défriser.
 &lt;img src=&quot;fonds/ville.PNG&quot;&gt;
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="44" name="ADULTE5A" tags="" position="1125,4075" size="100,100">... qu’il puisse s’acheter un café
-
-&lt;div class=&quot;reponses&quot;&gt;
-[[→|ADULTE6A]]
-&lt;/div&gt;
-
-&lt;header&gt;&lt;img src=&quot;horloge/8.png&quot;&gt;&lt;span&gt;Rue&lt;/span&gt;&lt;/header&gt;
-&lt;img src=&quot;fonds/ville.PNG&quot;&gt;
-
-&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
-
-</tw-passagedata><tw-passagedata pid="45" name="ADULTE5B" tags="" position="1275,4075" size="100,100">...je devrais être déjà au travail!
-
-&lt;div class=&quot;reponses&quot;&gt;
-[[→|ADULTE6B]]
-&lt;/div&gt;
-
-&lt;header&gt;&lt;img src=&quot;horloge/8.png&quot;&gt;&lt;span&gt;Rue&lt;/span&gt;&lt;/header&gt;
-&lt;img src=&quot;fonds/ville.PNG&quot;&gt;
-
-&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
-
-</tw-passagedata><tw-passagedata pid="46" name="ADULTE6A" tags="" position="1125,4200" size="100,100">“Merci beaucoup madame, que dieu vous garde!”
+</tw-passagedata><tw-passagedata pid="44" name="ADULTE5A" tags="" position="1125,4075" size="100,100">... qu’il puisse s’acheter un café.
+“Merci beaucoup madame, que dieu vous garde!”
 Je suis un peu plus contente
 
 &lt;div class=&quot;reponses&quot;&gt;
@@ -705,19 +758,8 @@ Je suis un peu plus contente
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="47" name="ADULTE7" tags="" position="1200,4325" size="100,100">Je continue à marcher, les feuilles d’octobre ont du mal à rougir, le temps est agréable pour penser à ailleurs
-
-&lt;div class=&quot;reponses&quot;&gt;
-[[→|ADULTE8]]
-&lt;/div&gt;
-
-&lt;header&gt;&lt;img src=&quot;horloge/8.png&quot;&gt;&lt;span&gt;Rue&lt;/span&gt;&lt;/header&gt;
-&lt;img src=&quot;fonds/ville.PNG&quot;&gt;
-
-&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
-
-&lt;&lt;audio &quot;pas&quot; start&gt;&gt;
-</tw-passagedata><tw-passagedata pid="48" name="ADULTE6B" tags="" position="1275,4200" size="100,100">Il me regarde un peu mal, mais tourne son visage vers la personne suivante
+</tw-passagedata><tw-passagedata pid="45" name="ADULTE5B" tags="" position="1275,4075" size="100,100">...je devrais être déjà au travail!
+Il me regarde un peu mal, mais tourne son visage vers la personne suivante
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE7]]
@@ -728,7 +770,19 @@ Je suis un peu plus contente
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="49" name="ADULTE8" tags="" position="1200,4450" size="100,100">Devant l’hôpital je retrouve ma collège Claise qui boit un café. &lt;br&gt;Est-ce que?
+</tw-passagedata><tw-passagedata pid="46" name="ADULTE7" tags="" position="1200,4325" size="100,100">Je continue à marcher, les feuilles d’octobre ont du mal à rougir, le temps est agréable pour penser à ailleurs
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE8]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/8.png&quot;&gt;&lt;span&gt;Rue&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/ville.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+&lt;&lt;audio &quot;pas&quot; play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="47" name="ADULTE8" tags="" position="1200,4450" size="100,100">Devant l’hôpital je retrouve ma collège Claise qui boit un café. &lt;br&gt;Est-ce que?
 
 &lt;div class=&quot;reponses deux&quot;&gt;
 [[Je monte directement...|ADULTE10A]]
@@ -741,7 +795,7 @@ Je suis un peu plus contente
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
 &lt;&lt;audio &quot;pas&quot; stop&gt;&gt;
-</tw-passagedata><tw-passagedata pid="50" name="ADULTE10A" tags="" position="1275,4575" size="100,100">pour discuter 3 minutes avec elle.
+</tw-passagedata><tw-passagedata pid="48" name="ADULTE10A" tags="" position="1275,4575" size="100,100">pour discuter 3 minutes avec elle.
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Comment ça va?|ADULTE11B]]
@@ -752,7 +806,7 @@ Je suis un peu plus contente
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="51" name="ADULTE10B" tags="" position="1125,4575" size="100,100">et prendrai un café en haut.
+</tw-passagedata><tw-passagedata pid="49" name="ADULTE10B" tags="" position="1125,4575" size="100,100">et prendrai un café en haut.
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE11A]]
@@ -762,7 +816,7 @@ Je suis un peu plus contente
 &lt;img src=&quot;fonds/lycee.PNG&quot;&gt;
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="52" name="ADULTE11A" tags="" position="1100,5550" size="100,100">J’arrive dans nos locaux, je laisse mes affaires et enfile ma blouse.&lt;br&gt;
+</tw-passagedata><tw-passagedata pid="50" name="ADULTE11A" tags="" position="1100,5550" size="100,100">J’arrive dans nos locaux, je laisse mes affaires et enfile ma blouse.&lt;br&gt;
 Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;reponses deux&quot;&gt;
@@ -775,7 +829,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="53" name="ADULTE11B" tags="" position="1275,4700" size="100,100">&quot;Bien, et toi, ce weekend avec tes enfants?&quot;
+</tw-passagedata><tw-passagedata pid="51" name="ADULTE11B" tags="" position="1275,4700" size="100,100">&quot;Bien, et toi, ce weekend avec tes enfants?&quot;
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Oui!|ADULTE12B]]
@@ -786,7 +840,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="54" name="ADULTE12B" tags="" position="1275,4825" size="100,100">On a pu profiter en famille...
+</tw-passagedata><tw-passagedata pid="52" name="ADULTE12B" tags="" position="1275,4825" size="100,100">On a pu profiter en famille...
 
 &lt;div class=&quot;reponses deux&quot;&gt;
 [[... on est allé pas très loin, faire du kayak!|ADULTE12AB]]
@@ -798,7 +852,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="55" name="ADULTE12AB" tags="" position="1200,4975" size="100,100">Ah super! Ça a dû être rigolo!
+</tw-passagedata><tw-passagedata pid="53" name="ADULTE12AB" tags="" position="1200,4975" size="100,100">Ah super! Ça a dû être rigolo!
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Oui, c&#39;était super!|ADULTE13AB]]
@@ -809,7 +863,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="56" name="ADULTE12BB" tags="" position="1400,4975" size="100,100">&quot;Ah oui, tu penses que c’est dû à quoi?&quot;
+</tw-passagedata><tw-passagedata pid="54" name="ADULTE12BB" tags="" position="1400,4975" size="100,100">&quot;Ah oui, tu penses que c’est dû à quoi?&quot;
 
 &lt;div class=&quot;reponses deux&quot;&gt;
 [[J’ai peur que quelque chose...|ADULTE12ABB]]
@@ -821,7 +875,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="57" name="ADULTE13AB" tags="" position="1200,5400" size="100,100">Je dois y aller Claire, j’arrive en retard à un rendez-vous!
+</tw-passagedata><tw-passagedata pid="55" name="ADULTE13AB" tags="" position="1200,5400" size="100,100">Je dois y aller Claire, j’arrive en retard à un rendez-vous!
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE11A]]
@@ -832,7 +886,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="58" name="ADULTE12BBB" tags="" position="1550,5100" size="100,100"> des même discriminations que moi quand j’étais enfant
+</tw-passagedata><tw-passagedata pid="56" name="ADULTE12BBB" tags="" position="1550,5100" size="100,100"> des même discriminations que moi quand j’étais enfant
  
  &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE13BBB]]
@@ -843,7 +897,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="59" name="ADULTE12ABB" tags="" position="1400,5100" size="100,100">...n’aille pas bien à l’école
+</tw-passagedata><tw-passagedata pid="57" name="ADULTE12ABB" tags="" position="1400,5100" size="100,100">...n’aille pas bien à l’école
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE13ABB]]
@@ -852,7 +906,7 @@ Est-ce que je prend mon stéthoscope?
 &lt;header&gt;&lt;img src=&quot;horloge/9.png&quot;&gt;&lt;span&gt;Hall d&#39;entrée&lt;/span&gt;&lt;/header&gt;
 &lt;img src=&quot;fonds/lycee.PNG&quot;&gt;
 
-&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="60" name="ADULTE13ABB" tags="" position="1400,5225" size="100,100">&quot;Ah, je pense que tu devrais en parler avec des profs qui la connaissaient&quot;
+&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="ADULTE13ABB" tags="" position="1400,5225" size="100,100">&quot;Ah, je pense que tu devrais en parler avec des profs qui la connaissaient&quot;
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Je vais sûrement le faire...|ADULTE15AB]]
@@ -863,7 +917,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="61" name="ADULTE15AB" tags="" position="1475,5375" size="100,100">...je l’ai juste remarqué ce matin quand je la préparais pour aller en classe
+</tw-passagedata><tw-passagedata pid="59" name="ADULTE15AB" tags="" position="1475,5375" size="100,100">...je l’ai juste remarqué ce matin quand je la préparais pour aller en classe
 
  &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE13AB]]
@@ -874,7 +928,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="62" name="ADULTE13BBB" tags="" position="1550,5225" size="100,100">&quot;Ah, je pense que tu devrais lui demander, pour qu’elle sache se défendre&quot;
+</tw-passagedata><tw-passagedata pid="60" name="ADULTE13BBB" tags="" position="1550,5225" size="100,100">&quot;Ah, je pense que tu devrais lui demander, pour qu’elle sache se défendre&quot;
 
  &lt;div class=&quot;reponses&quot;&gt;
 [[Je vais sûrement le faire...|ADULTE15AB]]
@@ -885,7 +939,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="63" name="ADULTE13B" tags="" position="1175,5700" size="100,100">... je dois juste discuter avec un patient. Alors je monte vers le 5ème étage, où se trouvent les salles de consultation
+</tw-passagedata><tw-passagedata pid="61" name="ADULTE13B" tags="" position="1175,5700" size="100,100">... je dois juste discuter avec un patient. Alors je monte vers le 5&lt;sup&gt;ème&lt;/sup&gt; étage, où se trouvent les salles de consultation
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE14B]]
@@ -896,7 +950,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="64" name="ADULTE13A" tags="" position="1025,5700" size="100,100">... je dois juste discuter avec un patient. Alors je monte vers le 5ème étage, où se trouvent les salles de consultation
+</tw-passagedata><tw-passagedata pid="62" name="ADULTE13A" tags="" position="1025,5700" size="100,100">... je dois juste discuter avec un patient. Alors je monte vers le 5&lt;sup&gt;ème&lt;/sup&gt; étage, où se trouvent les salles de consultation
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE14A]]
@@ -907,9 +961,9 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="65" name="ADULTE14A" tags="" position="925,5825" size="100,100">Je me souviens du café de Claire, est-ce que je passe à la machine?
+</tw-passagedata><tw-passagedata pid="63" name="ADULTE14A" tags="" position="925,5825" size="100,100">Je me souviens du café de Claire, est-ce que je passe à la machine?
 
-&lt;div class=&quot;reponses&quot;&gt;
+&lt;div class=&quot;reponses deux&quot;&gt;
 [[Oui, super envie!|ADULTE16AA]]
 [[Umm, peut-être plus tard|ADULTE16AB]]
 &lt;/div&gt;
@@ -919,10 +973,10 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="66" name="ADULTE14B" tags="" position="1175,5825" size="100,100">Je me souviens du café de Claire, est-ce que je passe à la machine?
+</tw-passagedata><tw-passagedata pid="64" name="ADULTE14B" tags="" position="1175,5825" size="100,100">Je me souviens du café de Claire, est-ce que je passe à la machine?
 
 &lt;div class=&quot;reponses deux&quot;&gt;
-[[Umm, peut-être plus tard|ADULTE16BA]]
+[[Umm, peut-être plus tard|ADULTE15B]]
 [[Oui, super envie!|ADULTE16BB]]
 &lt;/div&gt;
 
@@ -931,7 +985,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="67" name="ADULTE16AA" tags="" position="825,5950" size="100,100">Je sors mes pièces, appuie sur le bouton marqué Cappucino et patiente
+</tw-passagedata><tw-passagedata pid="65" name="ADULTE16AA" tags="" position="825,5950" size="100,100">Je sors mes pièces, appuie sur le bouton marqué Cappucino et patiente
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[À ce moment...|ADULTE17AA]]
@@ -942,7 +996,7 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-&lt;&lt;audio &quot;cafe&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="ADULTE16AB" tags="" position="1200,7050" size="100,100">Je continue ma route alors!
+&lt;&lt;audio &quot;cafe&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="ADULTE16AB" tags="" position="1200,7050" size="100,100">Je continue ma route alors!
 
 
 &lt;div class=&quot;reponses&quot;&gt;
@@ -954,36 +1008,48 @@ Est-ce que je prend mon stéthoscope?
 
 &lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="69" name="ADULTE16BA" tags="" position="1275,5950" size="100,100"></tw-passagedata><tw-passagedata pid="70" name="ADULTE16BB" tags="" position="1125,5950" size="100,100"></tw-passagedata><tw-passagedata pid="71" name="ADULTE17A" tags="" position="1200,7200" size="100,100">J’ai mon rendez-vous en 3 minutes, je consulte un peu mon téléphone en attendant...
+</tw-passagedata><tw-passagedata pid="67" name="ADULTE16BB" tags="" position="1325,5950" size="100,100">Je sors mes pièces, appuie sur le bouton marqué Cappucino et patiente
 
 &lt;div class=&quot;reponses&quot;&gt;
-[[→ (a continuer) |FIN1]]
+[[À ce moment...|ADULTE17B]]
 &lt;/div&gt;
 
 &lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+&lt;&lt;audio &quot;cafe&quot; play&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="ADULTE17A" tags="" position="1200,7200" size="100,100">J’ai mon rendez-vous en 10 minutes, je consulte un peu mon téléphone en attendant...
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE18]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
 &lt;img src=&quot;fonds/iphone.jpg&quot;&gt;
 
 &lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="72" name="ADULTE17AA" tags="" position="825,6075" size="100,100">...une autre docteure arrive vers moi un peu agitée. Elle commence à me parler:
+</tw-passagedata><tw-passagedata pid="69" name="ADULTE17AA" tags="" position="825,6075" size="100,100">...une autre docteure arrive vers moi un peu agitée. Elle commence à me parler:
 
 &lt;div class=&quot;reponses&quot;&gt;
-[[“Excusez moi madame...&quot; |ADULTE18AA]]
+[[Excusez moi madame...|ADULTE18AA]]
+
 &lt;/div&gt;
 
 &lt;header&gt;&lt;img src=&quot;horloge/10.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
 &lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
 
-&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="ADULTE18AA" tags="" position="825,6200" size="100,100"> ...une de mes patientes a commencée à trop saigner du nez.”
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="ADULTE18AA" tags="" position="825,6200" size="100,100"> ...une de mes patientes a commencée à trop saigner du nez.”
  
 &lt;div class=&quot;reponses&quot;&gt;
-[[“Est-ce vous pourrez...&quot;|ADULTE19AA]]
+[[Est-ce vous pourrez...|ADULTE19AA]]
 &lt;/div&gt;
 
 &lt;header&gt;&lt;img src=&quot;horloge/10.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
 &lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
 
-&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="ADULTE19AA" tags="" position="825,6325" size="100,100"> passer toute à l’heure dans la 302 pour nettoyer ça?”
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="ADULTE19AA" tags="" position="825,6325" size="100,100"> passer toute à l’heure dans la 302 pour nettoyer ça?”
  
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE20AA]]
@@ -997,7 +1063,7 @@ Est-ce que je prend mon stéthoscope?
 
 
 
-</tw-passagedata><tw-passagedata pid="75" name="ADULTE20AA" tags="" position="825,6450" size="100,100">À ce moment je ne comprends pas pourquoi elle me demande ça.&lt;br&gt;
+</tw-passagedata><tw-passagedata pid="72" name="ADULTE20AA" tags="" position="825,6450" size="100,100">À ce moment je ne comprends pas pourquoi elle me demande ça.&lt;br&gt;
 Je lui réponds :
  
 &lt;div class=&quot;reponses deux&quot;&gt;
@@ -1013,7 +1079,7 @@ Je lui réponds :
 
 
 
-</tw-passagedata><tw-passagedata pid="76" name="ADULTE21AAA" tags="" position="725,6575" size="100,100">....vous faites une erreur
+</tw-passagedata><tw-passagedata pid="73" name="ADULTE21AAA" tags="" position="725,6575" size="100,100">....vous faites une erreur
  
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE22AA]]
@@ -1027,7 +1093,7 @@ Je lui réponds :
 
 
 
-</tw-passagedata><tw-passagedata pid="77" name="ADULTE21AAB" tags="" position="875,6575" size="100,100">... je ne suis pas la personne du ménage !
+</tw-passagedata><tw-passagedata pid="74" name="ADULTE21AAB" tags="" position="875,6575" size="100,100">... je ne suis pas la personne du ménage !
  
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE22AA]]
@@ -1041,7 +1107,7 @@ Je lui réponds :
 
 
 
-</tw-passagedata><tw-passagedata pid="78" name="ADULTE22AA" tags="" position="800,6775" size="100,100">“Aië mince, je suis vraiment désolé je vous ai confondu à cause...”
+</tw-passagedata><tw-passagedata pid="75" name="ADULTE22AA" tags="" position="800,6775" size="100,100">“Aië mince, je suis vraiment désolé je vous ai confondu à cause...”
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[Je ne lui laisse pas finir sa phrase...|ADULTE23A]]
@@ -1055,7 +1121,7 @@ Je lui réponds :
 
 
 
-</tw-passagedata><tw-passagedata pid="79" name="ADULTE23A" tags="" position="800,6900" size="100,100">... parce que je sais très bien pourquoi elle m’a confondu avec la personne du ménage 😤
+</tw-passagedata><tw-passagedata pid="76" name="ADULTE23A" tags="" position="800,6900" size="100,100">... parce que je sais très bien pourquoi elle m’a confondu avec la personne du ménage 😤
 
 &lt;div class=&quot;reponses deux&quot;&gt;
 [[Parce que je prenais un café|ADULTE23AA]]
@@ -1068,7 +1134,7 @@ Je lui réponds :
 &lt;div class=&quot;niveau lv3&quot;&gt;&lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="80" name="ADULTE23AA" tags="" position="725,7025" size="100,100">Je crois pas non!
+</tw-passagedata><tw-passagedata pid="77" name="ADULTE23AA" tags="" position="725,7025" size="100,100">Je crois pas non!
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE23AB]]
@@ -1080,7 +1146,7 @@ Je lui réponds :
 &lt;div class=&quot;niveau lv3&quot;&gt;&lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="81" name="ADULTE23AB" tags="" position="925,7050" size="100,100"> ... en blouse mais que je suis noire
+</tw-passagedata><tw-passagedata pid="78" name="ADULTE23AB" tags="" position="925,7050" size="100,100"> ... en blouse mais que je suis noire
  
  &lt;div class=&quot;reponses&quot;&gt;
 [[Je continue ma route...|ADULTE25A]]
@@ -1092,7 +1158,7 @@ Je lui réponds :
 &lt;div class=&quot;niveau lv3&quot;&gt;&lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="82" name="ADULTE25A" tags="" position="1075,7050" size="100,100">... il y en a marre de ces gens
+</tw-passagedata><tw-passagedata pid="79" name="ADULTE25A" tags="" position="1075,7050" size="100,100">... il y en a marre de ces gens
 
  &lt;div class=&quot;reponses&quot;&gt;
 [[→|ADULTE17A]]
@@ -1104,7 +1170,7 @@ Je lui réponds :
 &lt;div class=&quot;niveau lv3&quot;&gt;&lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="83" name="FIN1" tags="" position="1400,7400" size="100,100">Voilà une journée que vivent beaucoup de gens quotidienement, on vous laisse y réfléchir à toutes ces situations.
+</tw-passagedata><tw-passagedata pid="80" name="FIN1" tags="" position="1675,8050" size="100,100">Voilà une journée que vivent beaucoup de gens quotidienement, on vous laisse y réfléchir à toutes ces situations.
 
 &lt;div class=&quot;reponses&quot;&gt;
 [[→|FIN2]]
@@ -1115,9 +1181,9 @@ Je lui réponds :
 
 &lt;&lt;audio &quot;tictac&quot; play&gt;&gt;
 
-&lt;div class=&quot;niveau transition&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="FIN2" tags="" position="1525,7400" size="100,100">Si tu peux revenir sur une partie de cette journée tu peux revenir:
+&lt;div class=&quot;niveau transition&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="FIN2" tags="" position="1800,8050" size="100,100">Si tu peux revivre une partie de cette journée tu peux revenir au:
 
-&lt;div class=&quot;reponses&quot;&gt;
+&lt;div class=&quot;reponses trois&quot;&gt;
 [[Matin|ENFANT1]]
 [[Midi|ADO1]]
 [[Soir|ADULTE1]]
@@ -1128,6 +1194,217 @@ Je lui réponds :
 
 &lt;&lt;audio &quot;tictac&quot; stop&gt;&gt;
 
+</tw-passagedata><tw-passagedata pid="82" name="ADULTE18" tags="" position="1200,7325" size="100,100">J’appelle monsieur Thébon directement, pour ne pas perdre de temps
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE19]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="83" name="ADULTE19" tags="" position="1200,7450" size="100,100">Monsieur Thébon est assez costaud, d’une quarantaine d’années. Il me suit jusqu’à la salle de consultation
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE20]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="84" name="ADULTE20" tags="" position="1200,7575" size="100,100">Il s’installe tranquillement, et reste fixé à me regarder, il à l’air d’attendre
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE21]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="85" name="ADULTE21" tags="" position="1200,7700" size="100,100">“Quand est-ce que le docteur arrive?” me demande t-il
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE22]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="86" name="ADULTE22" tags="" position="1350,7800" size="100,100">Je reste un peu émue, au même temps que je me souviens que je n’avais pas pris mon stéthoscope, signe de mon “rang”
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[Retourner en arrière pour le prendre|ADULTE11A]]
+[[Expliquer à monsieur Thébon que...|ADULTE23]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="87" name="ADULTE23" tags="" position="1350,7925" size="100,100">... même étant une femme et sans stéthoscope on est docteur.
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE24]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="88" name="ADULTE24" tags="" position="1550,8050" size="100,100">La journée est finite... ouf!
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[Temps pour se reposer|FIN1]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="89" name="ADULTE15B" tags="" position="1100,6000" size="100,100">Je continue ma route alors!
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE20AB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Bureau 4&lt;sup&gt;ème&lt;/sup&gt; étage&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="90" name="ADULTE17B" tags="" position="1350,6100" size="100,100"> ...je vois passer une docteure quelque peu agitée, je ne sais pas ce qui a pu lui arriver
+ 
+&lt;div class=&quot;reponses deux&quot;&gt;
+[[J’espère rien de grave|ADULTE20AB]]
+[[Je vais quand même lui demander|ADULTE18AB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
+
+&lt;&lt;audio &quot;cafe&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="ADULTE18AB" tags="" position="1475,6125" size="100,100">- Salut, tout va bien? &lt;br&gt;
+Je t’ai vu un peu troublée...
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[Oh ne t’inquiète pas...|ADULTE19AB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv2&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="92" name="ADULTE19AB" tags="" position="1500,6275" size="100,100">&quot;... je dois juste chercher quelqu’un du ménage”
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE20AB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="93" name="ADULTE20AB" tags="" position="1500,6400" size="100,100">Je continue ma route alors
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE21AB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="94" name="ADULTE21AB" tags="" position="1500,6525" size="100,100">J’ai mon rendez-vous en 10 minutes, je consulte un peu mon téléphone en attendant...
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE22AB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/iphone.jpg&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="95" name="ADULTE22AB" tags="" position="1500,6650" size="100,100">Je monte à l’accueil de la salle d’attente nº3
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[Est-ce que tu peux...?|ADULTE23AAB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+</tw-passagedata><tw-passagedata pid="96" name="ADULTE23AAB" tags="" position="1500,6775" size="100,100">...appeller monsieur Thébon, s’il te plaît?” je demande à l’infirmier
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE24AAB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="97" name="ADULTE24AAB" tags="" position="1500,6900" size="100,100">L’infirmier entre l’appeller et sors avec un monsieur assez costaud, d’une quarantaine d’années
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[Monsieur, voici la docteure...|ADULTE25AAB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="98" name="ADULTE25AAB" tags="" position="1500,7025" size="100,100">...je vous laisse la suivre jusqu’à la salle de consultation&quot;
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE26AAB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle d&#39;attente&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/hopital.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="99" name="ADULTE26AAB" tags="" position="1500,7150" size="100,100">Je le conduit jusqu’à ladite salle et je lui demande à propos de son problème
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE27AAB]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/11.png&quot;&gt;&lt;span&gt;Salle de consultation&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/chambre.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+&lt;&lt;audio &quot;pas&quot; start&gt;&gt;
+</tw-passagedata><tw-passagedata pid="100" name="ADULTE27AAB" tags="" position="1500,7275" size="100,100">Cette consultation et toutes celles qui s’en suivent se passent sans problèmes
+
+&lt;div class=&quot;reponses&quot;&gt;
+[[→|ADULTE24]]
+&lt;/div&gt;
+
+&lt;header&gt;&lt;img src=&quot;horloge/12.png&quot;&gt;&lt;span&gt;Salle de consultation&lt;/span&gt;&lt;/header&gt;
+&lt;img src=&quot;fonds/chambre.PNG&quot;&gt;
+
+&lt;div class=&quot;niveau lv1&quot;&gt;&lt;/div&gt;
+
+&lt;&lt;audio &quot;stop&quot; start&gt;&gt;
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
