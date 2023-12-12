@@ -101,20 +101,22 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	<tw-storydata name="DANS MA PEAU" startnode="9" creator="Twine" creator-version="2.7.1" format="SugarCube" format-version="2.36.1" ifid="2ECA65E0-3703-4BCF-AAAA-9B5BD7A461C6" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap');
 
 body {
-	background-color: black;
+    background-color: black;
 }
 
-a, a:hover, a:visited {
-  text-decoration: none
+a,
+a:hover,
+a:visited {
+    text-decoration: none
 }
 
 a:active {
-      background-color: #ffffff8c !important;
+    background-color: #ffffff8c !important;
 }
 
 
 .passage {
-	transition: none;
+    transition: none;
 }
 
 
@@ -124,18 +126,18 @@ a:active {
     padding: 20px;
     margin: 0;
     height: 100vh;
-  	padding: 20vh 10vw 10vh 10vw;
+    padding: 20vh 10vw 10vh 10vw;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-  	font-weight: 600;
+    font-weight: 600;
     font-size: 20px;
-  	line-height: 28px;,
-  	line-height: 1.6 !important;
+    line-height: 28px;
+    line-height: 1.6 !important;
     font-family: 'Fraunces', serif;
- 	 text-shadow: 0 0 10px black;
+    text-shadow: 0 0 10px black;
 
-  
+
 }
 
 img {
@@ -146,49 +148,49 @@ img {
     left: 0;
     z-index: -1;
     object-fit: cover;
- 	opacity: 0.7;
+    opacity: 0.7;
 }
 
 
 /*HEADER*/
 
 header {
-width: 100vw;
-height: fit-content;
-position: fixed;
-top: 0;
-left: 0;
-display: flex;
-justify-content: space-between;
-box-sizing: border-box;
-padding: 15px;
+    width: 100vw;
+    height: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 header img {
-height: 70px;
-width: 70px;
-position: relative;
-opacity: 1;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    opacity: 1;
 }
 
 header span {
-width: 50%;
-color: white;
-text-align: right;
-margin-top: 10px;
-padding: 3px 8px 0px 8px;
-display: flex;
-align-items: center;
-justify-content: right;
-height: fit-content;
-border-radius: 5px;
-background: rgba(210, 210, 209, 0.40);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-font-size: 14px;
-text-shadow: 0px 0px 10px #000;
-backdrop-filter: blur(10px);
-font-family: sans-serif;
-  font-weight: 400;
+    width: 50%;
+    color: white;
+    text-align: right;
+    margin-top: 10px;
+    padding: 3px 8px 0px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: fit-content;
+    border-radius: 5px;
+    background: rgba(210, 210, 209, 0.40);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    text-shadow: 0px 0px 10px #000;
+    backdrop-filter: blur(10px);
+    font-family: sans-serif;
+    font-weight: 400;
 
 }
 
@@ -196,119 +198,122 @@ font-family: sans-serif;
 /*JAUGE*/
 
 .niveau {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
 }
 
 .niveau.lv1 {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,0) 100%, rgba(0,0,0,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 100%, rgba(0, 0, 0, 1) 100%);
 }
 
 .niveau.lv2 {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 .niveau.lv3 {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,0) -50%, rgb(0, 0, 0) 80%)
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) -50%, rgb(0, 0, 0) 80%)
 }
 
 
 /*REPONSES*/
 
-.reponses{
-	width: calc(100% - 40px);
+.reponses {
+    width: calc(100% - 40px);
     display: flex;
     padding: 0;
-    position: absolute;
+    position: fixed;
     justify-content: space-between;
     bottom: 0;
     left: 0;
     margin: 20px;
     font-family: sans-serif;
-  	font-size: 14px;
+    font-size: 14px;
 }
 
 .reponses a {
     background-color: #ffffff4a;
     padding: 10px;
-	width: 100%;
+    width: 100%;
     text-align: center;
     border-radius: 10px;
     color: white;
-	backdrop-filter: blur(10px);
-  	display: flex;
-	align-items: center;
-  	justify-content: center;
-  	border: 1px solid white;
-  box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    box-sizing: border-box;
 }
 
-.deux > a:nth-of-type(1){
- 	border-radius: 10px 0 0 10px!important;
-  	border-width: 1px 0 1px 1px;
+.deux>a:nth-of-type(1) {
+    border-radius: 10px 0 0 10px !important;
+    border-width: 1px 0 1px 1px;
 }
 
-.deux > a:nth-of-type(2){
-  	border-radius: 0 10px 10px 0!important;
+.deux>a:nth-of-type(2) {
+    border-radius: 0 10px 10px 0 !important;
 }
 
 
 /*INTRO STYLE*/
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  justify-content: space-between;
-  height: 180px;
-  text-align: center;
-  font-size: 24px;
-  line-height: 31px;
-  font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    height: 180px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 31px;
+    font-family: sans-serif;
+    font-weight: 400;
 }
 
 #titre {
-  font-size: 34px;
-  text-align: center;
-  text-transform: uppercase;
-  position: absolute;
-  color: gold;
-  font-weight: 900;
-font-family: 'Fraunces', serif;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    color: gold;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
 }
 
 .reponses.deux.index {
-  justify-content: space-around;
-  flex-direction: column;
-  gap: 10px;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .reponses.deux.index a {
-  border-radius: 10px !important;
-border: 1px solid white;
-border-width: 1px;
+    border-radius: 10px !important;
+    border: 1px solid white;
+    border-width: 1px;
+    text-transform: uppercase;
 }
 
 
 .reponses.deux.index a:nth-child(2) {
-  background-color: red;
+    background-color: #ffffff9e;
 }
 
 .reponses.deux.index a:nth-child(4) {
-  background-color: blue;
+    background-color: #00000059;
+    ;
 }
 
 /*A PROPOS STYLE*/
 .apropos {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">Config.debug = false;
 UIBar.destroy();
 UIBar.stow();</script><tw-passagedata pid="1" name="INTRO1" tags="" position="500,200" size="100,100">Bonjour, si tu es ici ce n’est pas un hasard…
@@ -382,7 +387,9 @@ UIBar.stow();</script><tw-passagedata pid="1" name="INTRO1" tags="" position="50
 &lt;&lt;cacheaudio &quot;cafe&quot; &quot;audio/cafe.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;attente&quot; &quot;audio/attente.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;sncf&quot; &quot;audio/sncf.mp3&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="9" name="INDEX" tags="" position="500,50" size="100,100">&lt;div class=&quot;intro&quot;&gt;
+</tw-passagedata><tw-passagedata pid="9" name="INDEX" tags="" position="500,50" size="100,100">&lt;header&gt;&lt;span&gt;UTC de Compiègne&lt;/span&gt;&lt;/header&gt;
+
+&lt;div class=&quot;intro&quot;&gt;
 &lt;span id=&quot;titre&quot;&gt;Dans ma peau&lt;/span&gt;
 
 Expérience immersive dans mon quotidien.
@@ -712,7 +719,9 @@ Elle n&#39;a jamais accepté de me les défriser.
 
 &lt;&lt;audio &quot;tictac&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;sncf&quot; play&gt;&gt;
-</tw-passagedata><tw-passagedata pid="41" name="APROPOS" tags="" position="325,200" size="100,100">&lt;div class=&quot;apropos&quot;&gt;Dans ma peau est un récit narratif interactif, dans lequel les utilisateurs se mettent, comme son titre l’indique, dans la peau d’une personne subissant des discriminations raciales. Ce site offre une expérience immersive et éducative, permettant aux utilisateurs de mieux comprendre les défis et les émotions auxquelles sont confrontées les personnes victimes de ce type de discriminations.
+</tw-passagedata><tw-passagedata pid="41" name="APROPOS" tags="" position="325,200" size="100,100">&lt;header&gt;&lt;span&gt;SI28 · A23&lt;/span&gt;&lt;/header&gt;
+
+&lt;div class=&quot;apropos&quot;&gt;Dans ma peau est un récit narratif interactif, dans lequel les utilisateurs se mettent, comme son titre l’indique, dans la peau d’une personne subissant des discriminations raciales. Ce site offre une expérience immersive et éducative, permettant aux utilisateurs de mieux comprendre les défis et les émotions auxquelles sont confrontées les personnes victimes de ce type de discriminations.
 
 Ce projet a été réalisé dans le cadre du cours de SI28 impartit par Serge Bouchardon à l&#39;UTC de Compiègne au semestre d&#39;automne 2023. Imaginé et conçu par Alaina Saint-Denis, Mulonde Reis et Pablo Moreno, nous avons travaillé à six mains pour mettre en forme de récit, images et développement. &lt;/div&gt;
 
