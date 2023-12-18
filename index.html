@@ -98,7 +98,14 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Dans ma Peau - SI28" startnode="9" creator="Twine" creator-version="2.7.1" format="SugarCube" format-version="2.36.1" ifid="2ECA65E0-3703-4BCF-AAAA-9B5BD7A461C6" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap');
+	<tw-storydata name="Dans ma Peau - SI28" startnode="9" creator="Twine" creator-version="2.7.1" format="SugarCube" format-version="2.36.1" ifid="2ECA65E0-3703-4BCF-AAAA-9B5BD7A461C6" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap');
 
 body {
     background-color: black;
@@ -116,6 +123,8 @@ a:active {
 
 
 .passage {
+    -webkit-transition: none;
+    -o-transition: none;
     transition: none;
 }
 
@@ -127,9 +136,14 @@ a:active {
     margin: 0;
     height: 100vh;
     padding: 20vh 10vw 10vh 10vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    box-sizing: border-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-weight: 600;
     font-size: 22px;
     line-height: 28px;
@@ -145,32 +159,41 @@ img {
     top: 0;
     left: 0;
     z-index: -1;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     opacity: 0.7;
 }
 
 .logo {
   width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   top: 0;
   left: 0;
   z-index: 99;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 1;
   margin-bottom: 50px;
 }
 
 .logo-apropos {
   width: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   position: absolute;
   top: 18vh;
   left: 50vw;
   z-index: 99;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 1;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 
@@ -178,13 +201,20 @@ img {
 
 header {
     width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: fixed;
     top: 0;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 15px;
 }
 
@@ -201,16 +231,26 @@ header span {
     text-align: right;
     margin-top: 10px;
     padding: 3px 8px 0px 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: right;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border-radius: 5px;
     background: rgba(210, 210, 209, 0.40);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 16px;
     text-shadow: 0px 0px 10px #000;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     font-family: sans-serif;
     font-weight: 400;
 
@@ -230,16 +270,22 @@ header span {
 
 .niveau.lv1 {
     background: rgb(255, 255, 255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, rgba(255, 255, 255, 0)), to(rgba(238, 70, 70)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 80%, rgba(238, 70, 70) 100%);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, rgba(238, 70, 70) 100%);
 }
 
 .niveau.lv2 {
     background: rgb(255, 255, 255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0)), to(rgb(232, 63, 63)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 20%, rgb(232, 63, 63) 100%);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgb(232, 63, 63) 100%);
 }
 
 .niveau.lv3 {
     background: rgb(255, 255, 255);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(-50%, rgba(255, 255, 255, 0)), color-stop(80%, rgb(238, 70, 70)));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) -50%, rgb(238, 70, 70) 80%);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) -50%, rgb(238, 70, 70) 80%)
 }
 
@@ -248,10 +294,14 @@ header span {
 
 .reponses {
     width: calc(100% - 40px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 0;
     position: fixed;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     bottom: 0;
     left: 0;
     margin: 20px;
@@ -268,12 +318,20 @@ header span {
     text-align: center;
     border-radius: 10px;
     color: white;
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: 1px solid white;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .deux>a:nth-of-type(1) {
@@ -286,8 +344,13 @@ header span {
 }
 
 .reponses.trois {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
   text-transform: uppercase;
   font-weight: 900;
@@ -297,11 +360,20 @@ header span {
 /*INTRO STYLE*/
 
 .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-items: center;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 180px;
     text-align: center;
     font-size: 22px;
@@ -321,8 +393,12 @@ header span {
 }
 
 .reponses.deux.index {
-    justify-content: space-around;
-    flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   gap: 10px;
 }
 
@@ -337,7 +413,21 @@ header span {
 
 .reponses.deux.index a:nth-child(2) {
     background-color: #ffffff47;
-  animation: blink 4s ease-in-out infinite;
+  -webkit-animation: blink 4s ease-in-out infinite;
+          animation: blink 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes blink{
+  0%{
+    background-color: #ffffff47;
+  }
+  
+  50%{
+    background-color: gold;
+  }
+    100%{
+    background-color: #ffffff47;
+  }
 }
 
 @keyframes blink{
@@ -438,9 +528,7 @@ UIBar.stow();</script><tw-passagedata pid="1" name="INTRO1" tags="" position="50
 </tw-passagedata><tw-passagedata pid="9" name="INDEX" tags="" position="500,50" size="100,100">&lt;header&gt;&lt;div&gt;&lt;/div&gt;&lt;span&gt;UTC de Compiègne&lt;/span&gt;&lt;/header&gt;
 &lt;div class=&quot;intro&quot;&gt;
 &lt;img class=&quot;logo&quot; src=&quot;logo.svg&quot;&gt;
-
 &lt;span&gt;Expérience immersive dans mon quotidien&lt;/span&gt;
-
 &lt;/div&gt;
 
 &lt;div class=&quot;reponses deux index&quot;&gt;
@@ -1239,7 +1327,8 @@ Je lui réponds :
 
 &lt;&lt;audio &quot;tictac&quot; play&gt;&gt;
 
-&lt;div class=&quot;niveau transition&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="FIN2" tags="" position="1800,8050" size="100,100">Si tu peux revivre une partie de cette journée tu peux revenir au:
+&lt;div class=&quot;niveau transition&quot;&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="FIN2" tags="" position="1800,8050" size="100,100">Si tu peux revivre une partie de cette journée tu peux revenir à un moment spécifique de la journée.&lt;br&gt;
+Sinon, le récit se finit ici.
 
 &lt;div class=&quot;reponses trois&quot;&gt;
 [[Matin|ENFANT1]]
